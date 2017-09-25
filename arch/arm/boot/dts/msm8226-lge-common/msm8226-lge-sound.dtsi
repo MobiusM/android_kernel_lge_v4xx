@@ -11,6 +11,28 @@
  */
 
 &soc {
+
+/* LGE_UPDATE beekey@lge.com This's for WCD9306. WX use WCD9302.
+	sound {
+		qcom,audio-routing =
+			"RX_BIAS", "MCLK",
+			"LDO_H", "MCLK",
+			"SPK_OUT", "MCLK",
+			"SPK_OUT", "EXT_VDD_SPKR",
+			"AMIC1", "MIC BIAS1 External",
+			"MIC BIAS1 External", "Handset Mic",
+			"AMIC2", "MIC BIAS2 External",
+			"MIC BIAS2 External", "Headset Mic",
+			"AMIC3", "MIC BIAS1 External",
+			"MIC BIAS1 External", "ANCRight Headset Mic",
+			"AMIC4", "MIC BIAS2 External",
+			"MIC BIAS2 External", "ANCLeft Headset Mic";
+
+		qcom,cdc-mclk-gpios = <&pm8226_gpios 1 0>;
+		qcom,cdc-vdd-spkr-gpios = <&msmgpio 87 0>;
+	};
+*/		
+
 	sound-9302 {
 		qcom,audio-routing =
 			"RX_BIAS", "MCLK",
@@ -52,4 +74,5 @@
 		lge,clk-name = "cam_gp0_clk";
 		lge,clk-rate = <96000>; //This must match with clk_freq_tbl.
 	};
+
 };

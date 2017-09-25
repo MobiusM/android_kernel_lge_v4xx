@@ -39,7 +39,6 @@
 		qcom,mdss-dsi-color-order = <0>;
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
-		qcom,ulps-enabled;
 		qcom,mdss-dsi-on-command = [
 			05 01 00 00 20 00 02 01 00
 			15 01 00 00 20 00 02 AE 07
@@ -1575,36 +1574,36 @@
 		qcom,mdss-dsi-on-command = [
 		39 01 00 00 00 00 04    /*Set EXTC*/
 		B9 FF 83 94
-
+   
 		39 01 00 00 00 00 07   /*Set MIPI*/
 		BA 33 83 A0 65 B2 09
-
+		   
 		39 01 00 00 00 00 10  /*Set Power*/
 		B1 6C 12 12
 		34 04 11 F1
 		80 FF 54 23
 		80 C0 D2 58
-
+		   
 		39 01 00 00 00 00 0C /*Set Display*/
 		B2 00 64 0E
 		0D 32 1C 08
 		08 1C 4D 00
-
+		   
 		39 01 00 00 00 00 0D /*Set CYC*/
 		B4 00 FF 51
 		5A 59 5A 03
 		5A 01 70 01
-		70
+		70 
 
 		/*Set VCOM*/
-		39 01 00 00 00 00 04
+		39 01 00 00 00 00 04  
 		B6 73 73 E0
 
 		/*Set Gamma*/
 		39 01 00 00 00 00 2B
 		E0 0C 25 2C 27 2B 3D 2A 3F 06 0A 0C 17 0E 11 14 12 14 08 12 12
 		16 0C 19 24 27 2D 3D 2A 3F 08 0B 0C 17 0D 10 13 12 12 06 11 13 18
-
+		   
 		39 01 00 00 00 00 26 /*Set GIP*/
 		D3 00 07 00
 		40 07 10 00
@@ -1616,7 +1615,7 @@
 		10 07 07 08
 		00 00 00 0A
 		00 01
-
+		   
 		39 01 00 00 00 00 2D /*GIP Forward*/
 		D5 1A 1A 1B
 		1B 00 01 02
@@ -1629,8 +1628,8 @@
 		18 18 18 18
 		18 18 18 20
 		21 18 18 18
-		18
-
+		18 
+		   
 		39 01 00 00 00 00 2D /*GIP Backward*/
 		D6 1A 1A 1B
 		1B 0B 0A 09
@@ -1643,11 +1642,11 @@
 		18 18 18 18
 		18 18 18 25
 		24 18 18 18
-		18
+		18 
 
 		39 01 00 00 00 00 02  /*Set Panel*/
 		CC 09
-
+		
 		39 01 00 00 00 00 05  /*Set TCON*/
 		C7 00 C0 00
 		C0
@@ -2194,7 +2193,7 @@
 		FF 00 00 FF
 		00 00 FF 00
 		00 FF 00 00
-
+		
 		15 01 00 00 00 00 02 /*Set Address Mode*/
 		36 00
 
@@ -2206,7 +2205,7 @@
 		F1 10 00
 
 		05 01 00 00 05 00 01 /*GIP on and OTP read*/
-		11
+		11	
 		];
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
@@ -2230,8 +2229,8 @@
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
 		qcom,mdss-dsi-reset-sequence = <0 10>, <1 10>;
-	};
-
+	};					  
+	
 dsi_lh500wx9_vid_b: qcom,mdss_dsi_lh500wx9_720p_video_b {
 		lge,has-dsv;
 		qcom,enable-gpio = <&msmgpio 60 0>;
@@ -2533,7 +2532,7 @@ dsi_lh500wx9_vid_b: qcom,mdss_dsi_lh500wx9_720p_video_b {
 		FF 00 00 FF
 		00 00 FF 00
 		00 FF 00 00
-
+		
 		15 01 00 00 00 00 02 /*Set Address Mode*/
 		36 00
 
@@ -2545,7 +2544,7 @@ dsi_lh500wx9_vid_b: qcom,mdss_dsi_lh500wx9_720p_video_b {
 		F1 10 00
 
 		05 01 00 00 05 00 01 /*GIP on and OTP read*/
-		11
+		11	
 		];
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
